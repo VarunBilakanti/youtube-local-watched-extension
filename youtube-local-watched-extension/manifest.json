@@ -16,16 +16,16 @@
         "https://www.youtube.com/*"
       ],
       "js": [
-        "content.js"
+        "content/content.js"
       ],
       "css": [
-        "content.css"
+        "content/content.css"
       ],
       "run_at": "document_idle"
     }
   ],
   "action": {
     "default_title": "YouTube Local Watched",
-    "default_popup": "popup.html"
+    "default_popup": "popup/popup.html"
   }
 }

@@ -7,7 +7,7 @@ A Brave-compatible extension that tracks watched YouTube videos locally in this 
 1. Open `brave://extensions`.
 2. Turn on **Developer mode**.
 3. Click **Load unpacked**.
-4. Select this folder: `youtube-local-watched-extension`.
+4. Select this folder: `youtube-local-watched-extension/youtube-local-watched-extension`.
 
 ## What it does
 

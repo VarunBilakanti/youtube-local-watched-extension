@@ -200,7 +200,7 @@ toggleWatched.addEventListener("click", async () => {
 });
 
 openWatched.addEventListener("click", async () => {
-  await chrome.tabs.create({ url: chrome.runtime.getURL("list.html") });
+  await chrome.tabs.create({ url: chrome.runtime.getURL("list/list.html") });
 });
 
 render();
