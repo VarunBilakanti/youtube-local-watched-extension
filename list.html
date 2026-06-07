@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Local Watched List</title>
+    <link rel="stylesheet" href="list.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Watched videos</h1>
+          <p>Videos marked locally by this extension in Brave.</p>
+        </div>
+        <button id="refresh" type="button">Refresh</button>
+      </header>
+
+      <section class="toolbar" aria-label="Pagination controls">
+        <label>
+          <span>Records per page</span>
+          <select id="pageSize">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+        <p id="recordSummary" class="record-summary">Total records: 0</p>
+      </section>
+
+      <ol id="list" class="video-list"></ol>
+      <p id="empty" class="empty">No watched videos marked yet.</p>
+      <nav class="pager" aria-label="Watched videos pages">
+        <button id="prevPage" type="button">Prev</button>
+        <span id="pageInfo">Page 1 of 1</span>
+        <button id="nextPage" type="button">Next</button>
+      </nav>
+    </main>
+
+    <script src="list.js"></script>
+  </body>
+</html>

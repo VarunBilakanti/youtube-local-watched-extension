@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Local Watched</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>YouTube Local Watched</h1>
+
+      <label class="switch-row">
+        <span>Auto-mark while watching</span>
+        <input id="autoEnabled" type="checkbox">
+      </label>
+
+      <label class="field">
+        <span>Mark at <strong id="thresholdLabel">80%</strong></span>
+        <input id="threshold" type="range" min="5" max="100" step="5">
+      </label>
+
+      <section class="watched-section" aria-labelledby="watchedHeading">
+        <div class="section-head">
+          <h2 id="watchedHeading">Watched videos</h2>
+          <div class="section-actions">
+            <button id="toggleWatched" class="small-button" type="button" aria-expanded="false">Expand</button>
+            <button id="openWatched" class="small-button" type="button">Open list</button>
+          </div>
+        </div>
+        <div id="watchedPanel" class="watched-panel" hidden>
+          <div class="paging-tools">
+            <label>
+              <span>Per page</span>
+              <select id="popupPageSize">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+            </label>
+            <button id="refreshWatched" class="small-button" type="button">Refresh</button>
+          </div>
+          <p id="popupRecordSummary" class="record-summary">Total records: 0</p>
+          <ol id="watchedList" class="watched-list"></ol>
+          <p id="emptyList" class="empty">Open a YouTube tab to view the local list.</p>
+          <div class="pager">
+            <button id="popupPrevPage" class="small-button" type="button">Prev</button>
+            <span id="popupPageInfo">Page 1 of 1</span>
+            <button id="popupNextPage" class="small-button" type="button">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <button id="clearWatched" type="button">Clear watched videos</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
